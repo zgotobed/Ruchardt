@@ -16,7 +16,7 @@ fps = int(cap.get(cv2.CAP_PROP_FPS))
 fourcc = cv2.VideoWriter_fourcc(*"mp4v")  # Use "mp4v" for MP4 output
 
 # Define the cropping region dimensions
-crop_y_start = 2000
+crop_y_start = 2200
 crop_y_end = frame_height - 700 # To go until the end of the frame
 crop_x_start = 1000
 crop_x_end = 2160
@@ -64,7 +64,7 @@ with open(csv_file_path, mode='w', newline='') as csv_file:
         blurred = cv2.GaussianBlur(gray, (5, 5), 0)
         
         # Apply thresholding
-        _, thresh = cv2.threshold(blurred, 220, 255, cv2.THRESH_BINARY)
+        _, thresh = cv2.threshold(blurred, 230, 255, cv2.THRESH_BINARY)
     
         # Find contours
         contours, _ = cv2.findContours(thresh, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
