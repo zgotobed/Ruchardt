@@ -47,6 +47,7 @@ with open(csv_file_path, mode='w', newline='') as csv_file:
     counter = 0
     while cap.isOpened():
         counter += 1
+        print(counter)
         ret, frame = cap.read()
         
         if not ret:
@@ -71,7 +72,7 @@ with open(csv_file_path, mode='w', newline='') as csv_file:
         valid_contours = [
             c for c in contours if MIN_CONTOUR_AREA < cv2.contourArea(c) < MAX_CONTOUR_AREA
         ]
-        print(len(valid_contours))
+        # print(len(valid_contours))
 
         for contour in valid_contours:
             
