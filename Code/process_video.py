@@ -2,9 +2,9 @@ import cv2
 import csv
 
 # Input and output video paths
-input_video_path = "Untitled video.mp4"  # Change this to your actual video file
-output_video_path = "long_output_video.mp4"  # MP4 output
-csv_file_path = "coordinates_long.csv"  # CSV file to save the coordinates
+input_video_path = "3min4k60fps.mp4"  # Change this to your actual video file
+output_video_path = "3min_output_video.mp4"  # MP4 output
+csv_file_path = "coordinates_3min.csv"  # CSV file to save the coordinates
 
 # Open the video file
 cap = cv2.VideoCapture(input_video_path)
@@ -45,7 +45,7 @@ with open(csv_file_path, mode='w', newline='') as csv_file:
         # Crop the frame based on defined coordinates
         cropped = frame[crop_y_start:, crop_x_start:crop_x_end]
         if(counter == 2):
-            cv2.imwrite('cropped2.jpg',cropped)
+            cv2.imwrite('cropped3.jpg',cropped)
         # Convert to grayscale
         gray = cv2.cvtColor(cropped, cv2.COLOR_BGR2GRAY)
 
@@ -85,7 +85,7 @@ with open(csv_file_path, mode='w', newline='') as csv_file:
         cv2.drawContours(cropped, valid_contours, -1, (0, 255, 0), 2)  # Green color
 
         # Write the processed frame to the output video
-        out.write(cropped)
+        # out.write(cropped)
 
 # Release resources
 cap.release()
