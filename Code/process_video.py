@@ -2,9 +2,9 @@ import cv2
 import csv
 
 # Input and output video paths
-input_video_path = "../Videos/al_77.1.mp4"  # Change this to your actual video file
-output_video_path = "../Videos/output_al_77.1.mp4"  # MP4 output
-csv_file_path = "../CSV Files/coordinates_al_77.1.csv"  # CSV file to save the coordinates
+input_video_path = "../Videos/20250311_145216.mp4"  # Change this to your actual video file
+output_video_path = "../Videos/output_test.mp4"  # MP4 output
+csv_file_path = "../CSV Files/CSVOutput_Test.csv"  # CSV file to save the coordinates
 
 # Open the video file
 cap = cv2.VideoCapture(input_video_path)
@@ -18,9 +18,9 @@ fps = int(cap.get(cv2.CAP_PROP_FPS))
 fourcc = cv2.VideoWriter_fourcc(*"mp4v")  # Use "mp4v" for MP4 output
 
 # Define the cropping region dimensions
-crop_y_start = 800
-crop_y_end = frame_height - 200 # To go until the end of the frame
-crop_x_start = 150
+crop_y_start = 0
+crop_y_end = frame_height - 0 # To go until the end of the frame
+crop_x_start = 0
 crop_x_end = 1000
 
 # Validate cropping bounds
