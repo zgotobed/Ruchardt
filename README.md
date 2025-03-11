@@ -1,1 +1,1 @@
-Code To Measure the frequency of a pendulum by tracking the location of a white dot using cv2.
+Code to measure the oscillation frequency of a steel ball of known mass in order to determine the ratio of specific heats of a gas.
