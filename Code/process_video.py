@@ -9,6 +9,8 @@ csv_file_path = "../CSV Files/coordinates_al_77.1.csv"  # CSV file to save the c
 # Open the video file
 cap = cv2.VideoCapture(input_video_path)
 
+#Add a comment
+
 # Get video properties
 frame_width = int(cap.get(cv2.CAP_PROP_FRAME_WIDTH))
 frame_height = int(cap.get(cv2.CAP_PROP_FRAME_HEIGHT))
