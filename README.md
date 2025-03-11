@@ -14,7 +14,7 @@ This pipeline outlines the steps to process video data, extract relevant coordin
 
 3. **Process Video (`process_video.py`)**  
    - Import the video into `process_video.py`.
-   - Adjust cropping parameters and color cutoff as needed.
+   - Adjust cropping parameters and color threshold as needed.
    - Run the script to extract relevant data points.
 
 4. **Generate CSV File**  
